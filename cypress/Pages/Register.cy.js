@@ -1,4 +1,4 @@
-class Reg{
+class reg{
     visit(){
         return cy.visit("https://qa.d1ainun5cjrnni.amplifyapp.com/register")
     }
@@ -14,11 +14,14 @@ class Reg{
     BusinessName(){
         return cy.get('#register_businessName')
     }
+    dropdown(){
+        return cy.get(".ant-select-item-option-content")
+    }
     Country(){
-        return cy.get(".ant-select-selection-search-input")
+        return cy.get("#rc_select_0")
     }
     PhoneNumber(){
-        return cy.get("..add-on.ant-input-group-wrapper  .ant-input")
+        return cy.get(".add-on.ant-input-group-wrapper  .ant-input")
     }
     Password(){
         return cy.get("#register_password")
@@ -48,7 +51,10 @@ class Reg{
         return cy.get ('[class="mb-8"] .ant-checkbox-input')
     }
     SignupButton(){
-        return cy.get('[ant-click-animating-without-extra-node]')
+        return cy.get('button')
+    }
+    successfulMessage(){
+        return cy.get ('.ant-notification-notice-description')
     }
 }
-module.export = Reg
+module.exports = reg
