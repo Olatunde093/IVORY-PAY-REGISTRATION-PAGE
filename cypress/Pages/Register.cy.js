@@ -53,8 +53,15 @@ class reg{
     SignupButton(){
         return cy.get('button')
     }
-    successfulMessage(){
+    notification(){
         return cy.get ('.ant-notification-notice-description')
+
+    }
+    notification2(){
+        return cy.get('.ant-notification-notice-message')
+    }
+    errormessage(){
+        return cy.get ('.ant-form-item-explain-error')
     }
 }
 module.exports = reg
