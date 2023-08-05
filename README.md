@@ -1,6 +1,6 @@
 # Ivory Pay Registration
 
-# Computer Database
+# Registration Page
 
 ## Summary
 
